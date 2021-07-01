@@ -10,8 +10,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Build and run vuln-graphql-api
     run: >
-        SERVER_PORT=3000
-        docker-compose up --build --detach
+          SERVER_PORT=3000
+          docker-compose up --build --detach
     - name: Run HawkScan
     uses: stackhawk/hawkscan-action@v1.3.0
     with:
