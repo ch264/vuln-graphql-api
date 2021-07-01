@@ -9,12 +9,12 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@v2
       - name: Build and run vuln-graphql-api
-          run: >
-            SERVER_PORT=3000
-            docker-compose up --build --detach
+        run: >
+          SERVER_PORT=3000
+          docker-compose up --build --detach
       - name: Run HawkScan
-          uses: stackhawk/hawkscan-action@v1.3.0
-          with:
-            apiKey: ${{ secrets.HAWK_API_KEY }}
+        uses: stackhawk/hawkscan-action@v1.3.0
+        with:
+          apiKey: ${{ secrets.HAWK_API_KEY }}
 
 
