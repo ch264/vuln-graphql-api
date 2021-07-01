@@ -6,6 +6,15 @@ app:
   env: Development # (required)
   # The url of your application to scan
   host: http://localhost:3000/  # (required)
+  graphqlConf:
+    enabled: true
+    operation: QUERY
+  autoPolicy: true
+  autoInputVectors: true
+hawk:
+  spider:
+    base: false
+
   # The names of your session tokens aka: cookie names
 #  sessionTokens: # (optional)
 #    - "_toy_app_session"
